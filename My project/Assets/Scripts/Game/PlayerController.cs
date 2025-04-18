@@ -68,7 +68,8 @@ public class PlayerController : MonoBehaviour
     private void Die()
     {
         Debug.Log("Jugador destruido");
-        SceneManager.LoadScene("Results");
+        SceneGlobalManager.OnShowResults?.Invoke();
+        Time.timeScale = 0f;
     }
 
     void Shoot()
