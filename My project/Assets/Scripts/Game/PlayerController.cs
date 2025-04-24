@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Score_LifeDataSO currentHealth;
     [SerializeField] private PaletteSO paletteColor;
     private DynamicObjectPool bulletPool;
+
     void Start()
     {
         bulletPool = gameObject.AddComponent<DynamicObjectPool>();
@@ -79,6 +80,7 @@ public class PlayerController : MonoBehaviour
         bullet.transform.rotation = shootPoint.rotation;
         bullet.SetActive(true);
 
+
         Bullet bulletComponent = bullet.GetComponent<Bullet>();
         if (bulletComponent != null)
         {
@@ -89,4 +91,6 @@ public class PlayerController : MonoBehaviour
             Debug.LogError("El prefab de bala no tiene componente Bullet");
         }
     }
+
+
 }
