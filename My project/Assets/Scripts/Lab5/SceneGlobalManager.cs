@@ -25,7 +25,7 @@ public class SceneGlobalManager : MonoBehaviour
             OnShowResults += SceneLoader.ShowResults;
             OnUnloadGameAndResults += SceneLoader.UnloadGameAndResults;
 
-            SceneManager.LoadScene("MenuStart");
+           // SceneManager.LoadScene("MenuStart");
         }
         else
         {

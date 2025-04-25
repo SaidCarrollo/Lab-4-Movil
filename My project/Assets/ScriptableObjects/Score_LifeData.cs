@@ -6,6 +6,7 @@ public class Score_LifeDataSO : ScriptableObject
     public int currentScore;
     public int currentlife;
     public int highScore;
+
     public void ResetScore()
     {
         currentScore = 0;
@@ -27,5 +28,11 @@ public class Score_LifeDataSO : ScriptableObject
         {
             highScore = currentScore;
         }
+    }
+
+    // Método para cargar el high score desde PlayerPrefs
+    public void LoadHighScore()
+    {
+        highScore = PlayerPrefs.GetInt("HighScore", 0);
     }
 }
