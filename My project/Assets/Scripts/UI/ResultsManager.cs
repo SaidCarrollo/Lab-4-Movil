@@ -32,5 +32,33 @@ public class ResultsManager : MonoBehaviour
         // Mostrar ambos puntajes
         finalScoreTxt.text = "Your Score: " + scoreData.currentScore.ToString();
         highScoreTxt.text = "High Score: " + scoreData.highScore.ToString();
+
+        // Enviar notificaciones
+        var notificationManager = FindObjectOfType<NotificationManager>();
+        if (notificationManager != null)
+        {
+            if (scoreData.currentScore >= scoreData.highScore)
+            {
+                // Notificación 2: Nuevo Puntaje Máximo
+                notificationManager.SendNotification(
+                    "Nuevo Puntaje Máximo",
+                    $"¡Felicidades! Has conseguido {scoreData.currentScore} puntos.",
+                    5,
+                    "icon_1",
+                    "icon_1"
+                );
+            }
+            else
+            {
+                // Notificación 1: Ronda Terminada
+                notificationManager.SendNotification(
+                    "Ronda Terminada",
+                    $"Has conseguido {scoreData.currentScore} puntos.",
+                    5,
+                    "icon_0",
+                    "icon_0"
+                );
+            }
+        }
     }
 }

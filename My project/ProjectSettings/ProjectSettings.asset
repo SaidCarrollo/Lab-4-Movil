@@ -267,8 +267,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 2
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/Tecsup/Downloads/Lab-4-Movil/Usarkey/user.keystore
-  AndroidKeyaliasName: spacecopiokey1
+  AndroidKeystoreName: H:/Lab-4-Movil/Usarkey/user.keystore
+  AndroidKeyaliasName: spacecopio
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidEnableArm64MTE: 0
   AndroidBuildApkPerCpuArchitecture: 0
